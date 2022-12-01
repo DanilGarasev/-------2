@@ -1,0 +1,112 @@
+.tovar {
+    border: 1px solid black;
+    overflow: hidden;
+}
+img {
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+.row {
+    margin-bottom: 30px;
+}
+/**/
+body {
+    margin: 0;
+    text-align: center;
+    font-family: Verdana;
+    background: #f5f5f5;
+}
+h1 {
+    text-align: center;
+}
+input[type="radio"] {
+    display: none;
+}
+label {
+    width: 23%;
+    float: left;
+    text-align: center;
+    background: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    color: #222222;
+    padding: 0.5%;
+    margin: 0.5%;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+input[type="radio"][id="burger"]:checked + label {
+    background: #6666ff;
+}
+input[type="radio"][id="burger"]:checked ~ .pizza,
+input[type="radio"][id="burger"]:checked ~ .sushi,
+input[type="radio"][id="burger"]:checked ~ .apex {
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+}
+input[type="radio"][id="pizza"]:checked + label {
+    background: #ff4466;
+}
+input[type="radio"][id="pizza"]:checked ~ .burger,
+input[type="radio"][id="pizza"]:checked ~ .sushi,
+input[type="radio"][id="pizza"]:checked ~ .apex {
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+}
+input[type="radio"][id="sushi"]:checked + label {
+    background: #66dd99;
+}
+input[type="radio"][id="sushi"]:checked ~ .burger,
+input[type="radio"][id="sushi"]:checked ~ .pizza,
+input[type="radio"][id="sushi"]:checked ~ .apex {
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+}
+input[type="radio"][id="apex"]:checked + label {
+    background: rgb(255, 90, 255);
+}
+input[type="radio"][id="apex"]:checked ~ .burger,
+input[type="radio"][id="apex"]:checked ~ .pizza,
+input[type="radio"][id="apex"]:checked ~ .sushi {
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+}
+.tovar {
+    width: 23%;
+    height: 100%;
+    transition: all 1s;
+    margin: 0.5%;
+    margin-left: 50px;
+    padding: 0.5%;
+}
+.sushi {
+    background: #66dd99;
+}
+.burger {
+    background: #6666ff;
+}
+.pizza {
+    background: #ff4466;
+}
+.apex {
+    background: rgb(255, 90, 255);
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
